@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <style>
+        .kolor {
+            background-color:pink ;
+        }
+        .rozmiar {
+            font-size: 40px;
+        }
+        .czcionka {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Praca na lekcji</title>
+</head>
+<body>
+
+    <div>
+    <p id="tekst">Polska GUROM</p>
+  </div>
+
+  <div>
+  <button onclick="zmienKolor()">Zmień kolor</button>
+  <button onclick="zmienRozmiar()">Zmień rozmiar czcionki</button>
+  <button onclick="zmienCzcionke()">Zmień czcionke</button>
+  <button onclick="resetuj()">Resetuj</button>
+</div>
+
+<script>
+
+    function zmienKolor()
+    {
+        const napis = document.getElementById("tekst")
+        napis.classList.add("kolor")
+    }
+    function zmienRozmiar()
+    {
+        const napis = document.getElementById("tekst")
+        napis.classList.add("rozmiar")
+    }
+    function zmienCzcionke()
+    {
+        const napis = document.getElementById("tekst")
+        napis.classList.toggle("czcionka")
+    }
+    function resetuj()
+    {
+        const napis = document.getElementById("tekst") 
+        napis.classList.remove("kolor","rozmiar","czcionka")
+    }
+
+</script>
+</body>
+</html>
